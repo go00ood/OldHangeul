@@ -6,7 +6,7 @@ _ROOT=os.path.abspath(os.path.dirname(__file__))
 
 '''Dictionary'''
 #초성
-with open(os.path.join(_ROOT,'data','nitial_jamo.pickle'), 'rb') as fr:
+with open(os.path.join(_ROOT,'data','Initial_jamo.pickle'), 'rb') as fr:
     initial_list = pickle.load(fr)
 
 #중성 
