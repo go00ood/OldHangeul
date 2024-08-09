@@ -63,7 +63,13 @@ from OldHangeul import text_to_jamo
 text=text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', compatibility=False, spacing=True)
 print(text)
 ```
+
+text_to_jamo는 str타입으로 결과를 반환합니다. 
+
+```python
 ᄉ ᅳ ᄉ ᅳ ᇰ ᄂ ᅵ ᆷ ᄋ ᅵ _ 免 帖 _ ᄒ ᆞ ᄂ ᅡ ᄒ ᆞ ᆯ _ ᄌ ᅮ ᄉ ᅵ ᄀ ᅩ
+```
+
 
 
 ```python
@@ -72,8 +78,12 @@ from OldHangeul import text_to_jamo
 text=text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', compatibility=True, spacing=True)
 print(text)
 ```
-ㅅ ㅡ ㅅ ㅡ ㆁ ㄴ ㅣ ㅁ ㅇ ㅣ _ 免 帖 _ ㅎ ㆍ ㄴ ㅏ ㅎ ㆍ ㄹ _ ㅈ ㅜ ㅅ ㅣ ㄱ ㅗ
 
+compatibility와 spacing 옵션을 통해 다양한 자모 분리 및 공백 처리 방식을 설정할 수 있습니다.
+
+```python
+ㅅ ㅡ ㅅ ㅡ ㆁ ㄴ ㅣ ㅁ ㅇ ㅣ _ 免 帖 _ ㅎ ㆍ ㄴ ㅏ ㅎ ㆍ ㄹ _ ㅈ ㅜ ㅅ ㅣ ㄱ ㅗ
+```
 
 
 ---
