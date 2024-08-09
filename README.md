@@ -21,17 +21,20 @@ pip install OldHangeul
 `OldHangeul`은 파이썬에서 작동합니다. 
 
 ---
-### OLD_TEXTS
+### OldTexts
 
 옛한글이 포함된 텍스트를 다루는 클래스입니다. 완성형이 포함된 텍스트를 조합형으로 전환하고, 인덱싱(Indexing)과 슬라이싱(Slicing), `len()`, `get_jamo()`를 지원합니다. 
 
 ```python
-from OldHangeul import OLD_TEXTS
-a=OLD_TEXTS('스님이 免帖 나 주시고') #완성형이 포함된 텍스트입니다
-print(a)
+from OldHangeul import OldTexts
+text=OldTexts('스님이 免帖 나 주시고') #완성형이 포함된 텍스트입니다
+print(text)
 ```
 
+OldTexts 사용 예시입니다. 
+```python
 스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고
+```
 
 
 ```python
