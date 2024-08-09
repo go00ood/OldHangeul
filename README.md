@@ -39,10 +39,11 @@ OldTexts 사용 예시입니다.
 OldTexts는 문자열의 길이를 손쉽게 계산할 수 있으며, 인덱싱(indexing)과 슬라이싱(slicing) 기능도 제공합니다.
 
 ```python
->>> len(a)
-15
->>> a[1]
-스ᇰ
+len(text)
+#15
+
+text[1]
+#스ᇰ
 ```
 
 ---
