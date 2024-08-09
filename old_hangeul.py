@@ -1,7 +1,7 @@
 import unicodedata
 from .make_dic import initial_list, medial_list, final_list, ipf, jamo_list, jamo_list_all, jamo_list_key
 
-def PUA_TO_IPF(ascii_pua:int):
+def pua_to_ipf(ascii_pua:int):
     if 57532<=ascii_pua<=61439:
         return ipf[ascii_pua-57532]
     else:
