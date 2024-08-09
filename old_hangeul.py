@@ -229,4 +229,34 @@ def hNFC(text:str):
     
     return tem_sen
 
+def old_hNFD(text: str):
+    """
+    Convert only old hangeul characters in the text to decomposed Unicode characters (NFD).
+    """
+    texts = OldTexts(hNFC(text))
+    
+    converted_text = ''
+    
+    for item in texts.sen:
+        if item == '_':
+            converted_text += ' '
+            continue
+        
+        if len(item) > 1:
+            for char in item:
+                char_code = ord(char)
+                if 44032 <= char_code <= 55203 or 57532 <= char_code <= 61439 or 61696 <= char_code <= 63086:
+                    converted_text += unicodedata.normalize('NFD', char)
+                else:
+                    converted_text += char
+        else:
+            char_code = ord(item)
+            if 57532 <= char_code <= 61439 or 61696 <= char_code <= 63086:
+                converted_text += unicodedata.normalize('NFD', item)
+            else:
+                converted_text += unicodedata.normalize('NFC', item)
+    
+    return converted_text
+
+
 
