@@ -51,7 +51,7 @@ text[1]
 
 텍스트를 자음과 모음으로 분리합니다. 낱자는 space로 구분되어 있으며, 문서 내의 공백은 _로 나타냅니다. 
 
-Compatibility: 초성과 종성을 동일한 유니코드로 통일하여 처리
+compatibility: 초성과 종성을 동일한 유니코드로 통일하여 처리
 
 spacing: 문서 내 공백 표현 
 
@@ -59,14 +59,18 @@ spacing: 문서 내 공백 표현
 
 
 ```python
->>> from OldHangeul import OLD_TEXTS
->>> text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', Compatibility=False, spacing=True)
+from OldHangeul import text_to_jamo
+text=text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', compatibility=False, spacing=True)
+print(text)
 ```
 ᄉ ᅳ ᄉ ᅳ ᇰ ᄂ ᅵ ᆷ ᄋ ᅵ _ 免 帖 _ ᄒ ᆞ ᄂ ᅡ ᄒ ᆞ ᆯ _ ᄌ ᅮ ᄉ ᅵ ᄀ ᅩ
 
 
 ```python
->>> text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', Compatibility=True, spacing=True)
+
+from OldHangeul import text_to_jamo
+text=text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', compatibility=True, spacing=True)
+print(text)
 ```
 ㅅ ㅡ ㅅ ㅡ ㆁ ㄴ ㅣ ㅁ ㅇ ㅣ _ 免 帖 _ ㅎ ㆍ ㄴ ㅏ ㅎ ㆍ ㄹ _ ㅈ ㅜ ㅅ ㅣ ㄱ ㅗ
 
