@@ -1,1 +1,1 @@
-from .old_hangeul import (OLD_TEXTS, text_to_jamo, hNFD,hNFC)
+from .old_hangeul import (OLD_TEXTS, text_to_jamo, hNFD,hNFC, old_hNFD)
