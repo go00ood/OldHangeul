@@ -93,10 +93,14 @@ compatibility와 spacing 옵션을 통해 다양한 자모 분리 및 공백 처
 
 
 ```python
->>>from OldHangeul import hNFD
->>> hNFD('스님이 免帖 나 주시고')
+from OldHangeul import hNFD
+text=hNFD('스님이 免帖 나 주시고')
+print(text)
 ```
+```python
 스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고
+```
+
 
 
 ---
@@ -106,10 +110,14 @@ compatibility와 spacing 옵션을 통해 다양한 자모 분리 및 공백 처
 
 
 ```python
->>>from OldHangeul import hNFC
->>> hNFC('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고')
+from OldHangeul import hNFC
+text=hNFC('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고')
+print(text)
 ```
+```python
 스님이 免帖 나 주시고
+```
+
 
 ---
 ### old_hNFD
