@@ -38,16 +38,16 @@ class OLD_TEXTS:
     def get_text(self):
         return self.text
         
-    def get_jamo(self, Compatibility: bool, spacing:bool):
+    def get_jamo(self, compatibility: bool, spacing:bool):
         '''
         Convert text into jamo. Optional keyword arguments:
 
-        Compatibility: Integrates the initial and final consonants for processing.
+        compatibility: Integrates the initial and final consonants for processing.
         spacing: Processed with consideration of spaces (represented by '_').
         '''
         text=self.ori
-        jamo=text_to_jamo(text, Compatibility,spacing)
-        if Compatibility:
+        jamo=text_to_jamo(text, compatibility,spacing)
+        if compatibility:
             self.jamo_c=jamo
         else:
             self.jamo=jamo
@@ -73,7 +73,7 @@ class OLD_TEXTS:
                     if 44032<=word_ord<=55203 or  57532<=word_ord<=61439 or 61696<=word_ord<=63086:
 
                         if 57532<=word_ord<=61439 or 61696<=word_ord<=63086:
-                            word=PUA_TO_IPF(word_ord)
+                            word=pua_to_ipf(word_ord)
 
                         if text_tem!='':
                             text_list.append(text_tem)
@@ -120,11 +120,11 @@ def change_jamo(jamo):
     return jamo
 
 
-def text_to_jamo(text:str, Compatibility: bool=True, spacing:bool=True):
+def text_to_jamo(text:str, compatibility: bool=True, spacing:bool=True):
     '''
     Convert text into jamo. Optional keyword arguments:
 
-    Compatibility: Integrates the initial and final consonants for processing.
+    compatibility: Integrates the initial and final consonants for processing.
     spacing: Processed with consideration of spaces (represented by '_').
     '''
     text=OLD_TEXTS(text)
@@ -133,7 +133,7 @@ def text_to_jamo(text:str, Compatibility: bool=True, spacing:bool=True):
     for a in text.sen:
         one=unicodedata.normalize('NFD', a)
         one_jamo_list=__get_unicode(one)
-        if Compatibility and one_jamo_list !='_':
+        if compatibility and one_jamo_list !='_':
             tem_jamo_list=[]
             for one_jamo in one_jamo_list:
                 tem_jamo_list.append(change_jamo(one_jamo))
