@@ -126,8 +126,11 @@ print(text)
 
 
 ```python
->>>from OldHangeul import old_hNFD
->>> old_hNFD('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고')
+from OldHangeul import old_hNFD
+text=old_hNFD('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고') # 조합형 → 옛한글 낱자만 조합형
+print(text)
 ```
-스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고
 
+```python
+스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고
+```
