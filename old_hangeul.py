@@ -8,7 +8,7 @@ def pua_to_ipf(ascii_pua:int):
         return ipf[ascii_pua-57788]
 
 
-class OLD_TEXTS:
+class OldTexts:
     def __init__(self,sent:str):
         
         self.ori=sent
@@ -127,7 +127,7 @@ def text_to_jamo(text:str, compatibility: bool=True, spacing:bool=True):
     compatibility: Integrates the initial and final consonants for processing.
     spacing: Processed with consideration of spaces (represented by '_').
     '''
-    text=OLD_TEXTS(text)
+    text=OldTexts(text)
     text_jamo=''
     text_jamo_list=[]
     for a in text.sen:
@@ -158,7 +158,7 @@ def text_to_jamo(text:str, compatibility: bool=True, spacing:bool=True):
 
 def hNFD(text:str):
     '''Convert pre-composed Unicode characters to decomposed Unicode characters'''
-    texts=OLD_TEXTS(text)
+    texts=OldTexts(text)
     return texts.text
 
 def old_hNFD(text: str):
@@ -192,7 +192,7 @@ def old_hNFD(text: str):
 
 def hNFC(text:str):
     '''Convert decomposed Unicode characters to pre-composed Unicode characters''' 
-    texts=OLD_TEXTS(text)
+    texts=OldTexts(text)
     failed=''
     tem_sen=''
     for word in range(len(texts.sen)):
