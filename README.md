@@ -73,7 +73,6 @@ text_to_jamo는 str타입으로 결과를 반환합니다.
 
 
 ```python
-
 from OldHangeul import text_to_jamo
 text=text_to_jamo('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고', compatibility=True, spacing=True)
 print(text)
@@ -122,12 +121,12 @@ print(text)
 ---
 ### old_hNFD
 
-[유니코드 정규화](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EB%93%B1%EA%B0%80%EC%84%B1) 중 NFD의 기능입니다. 옛한글이 포함된 텍스트에도 작동하며, 전체 텍스트 중 옛한글이 포함된 낱자만 첫가끝(조합형)으로 변환합니다. 
+[유니코드 정규화](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EB%93%B1%EA%B0%80%EC%84%B1) 중 NFD의 기능입니다. 옛한글이 포함된 텍스트에도 작동하며, 전체 텍스트 중 옛한글이 포함된 글자만 첫가끝(조합형)으로 변환합니다. 
 
 
 ```python
 from OldHangeul import old_hNFD
-text=old_hNFD('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고') # 조합형 → 옛한글 낱자만 조합형
+text=old_hNFD('스스ᇰ님이 免帖 ᄒᆞ나ᄒᆞᆯ 주시고') # 조합형 → 옛한글 글자만 조합형
 print(text)
 ```
 
